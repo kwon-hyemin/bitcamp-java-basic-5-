@@ -6,42 +6,38 @@ import java.util.Scanner;
  * packageName: com.example.demo.grade
  * fileName : GradeDemo
  * author   : 권혜민
- * date     : 2022-01-26
+ * date     : 2022-01-27
  * desc     :
  * ================================
  * DATE      AUTHOR     NOTE
  * ================================
- * 2022-01-26    권혜민   최초 생성
+ * 2022-01-27    권혜민   최초 생성
  */
 public class GradeDemo {
     public static void main(String[] args) {
-        GradeApp gradeApp = new GradeApp();
-        System.out.println(GradeApp.GRADE_TITLE);
+
+        System.out.println(GradeApp.GRADE_APP);
         Scanner scanner = new Scanner(System.in);
-
-         String name = scanner.next();
-         int avg = scanner.nextInt();
-         int kor = scanner.nextInt();
-         int eng = scanner.nextInt();
-         int math = scanner.nextInt();
-         int total = scanner.nextInt();
-         String pass = scanner.next();
+        GradeApp gradeApp = new GradeApp();
 
 
-        String res = String.format(" * ########## %s ########\n" +
-                " * 이름: %s\n" +
-                " * > 국어: %d\n" +
-                " * > 영어: %d점\n" +
-                " * > 수학: %d점\n" +
-                " * 총점: %d점\n" +
-                " * 평균(정수): %d점\n" +
-                " * 합격여부: %d\n" +
-                " * #######################",
-                GradeApp.GRADE_TITLE, name, kor, eng, math, total,avg,pass);
+        for (int i = 1; i < 3; i++) {
 
+            System.out.println(i + "번 학생 : 이름, 국어,영어,수학");
+            String name = scanner.next();
+            System.out.println("kor");
+            int kor = scanner.nextInt();
+            System.out.println("eng");
+            int eng = scanner.nextInt();
+            System.out.println("math");
+            int math = scanner.nextInt();
+            System.out.println("total");
+            System.out.println("avg");
+            System.out.println("pass");
+            String res = gradeApp.grade(name, kor, eng, math);
+            System.out.println(res);
 
-        System.out.println(res);
-
+        }
 
     }
 }
