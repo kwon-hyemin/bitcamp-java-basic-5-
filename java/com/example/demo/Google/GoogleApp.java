@@ -16,7 +16,7 @@ package com.example.demo.Google;
  * 2022-01-25    권혜민   최초 생성
  */
 public class GoogleApp {
-    static String GOOGLE_APP = "Google";
+    public static String GOOGLE_APP = "Google";
 
     private String url = "";
 

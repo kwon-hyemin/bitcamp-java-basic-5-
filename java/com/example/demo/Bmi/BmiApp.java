@@ -16,7 +16,7 @@ package com.example.demo.Bmi;
  * 2022-01-25    권혜민   최초 생성
  */
 public class BmiApp {
-    static String BMI_APP = "BMI";
+    public static String BMI_APP = "BMI";
 
     private String cm;
     private String weight;
