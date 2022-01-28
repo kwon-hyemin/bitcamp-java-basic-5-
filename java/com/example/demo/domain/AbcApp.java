@@ -1,4 +1,4 @@
-package com.example.demo.abc;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.abc

@@ -1,4 +1,6 @@
-package com.example.demo.abc;
+package com.example.demo.Service;
+
+import com.example.demo.domain.AbcApp;
 
 import java.util.Scanner;
 

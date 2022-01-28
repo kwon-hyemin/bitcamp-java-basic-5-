@@ -1,4 +1,4 @@
-package com.example.demo.Google;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.Google
@@ -15,18 +15,18 @@ package com.example.demo.Google;
  * ================================
  * 2022-01-25    권혜민   최초 생성
  */
-public class GoogleApp {
+public class GoogleDTO {
     public static String GOOGLE_APP = "Google";
 
     private String url = "";
 
-    public String google(String url){
-
-
+    public String getUrl(){
+        return url;
+    }
+    public void setUrl(String url){
         this.url = url;
+    }
 
-        String res =  String.format("%s : 검색한 결과", url);
-        return res;
 
     }
-}
+

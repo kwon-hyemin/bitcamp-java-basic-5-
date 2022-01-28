@@ -1,4 +1,6 @@
-package com.example.demo.Bmi;
+package com.example.demo.Service;
+
+import com.example.demo.domain.BmiDTO;
 
 /**
  * packageName: com.example.demo.Bmi

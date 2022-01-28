@@ -1,4 +1,4 @@
-package com.example.demo.Bmi;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.Bmi
@@ -29,7 +29,7 @@ public class BmiDTO {
     public void setCm (String cm){
         this.cm =  cm;
     }
-    public String getWeight(String cm){
+    public String getWeight(){
         return weight;
     }
     public void setWeight (String weight){

@@ -1,6 +1,6 @@
-package com.example.demo.Login;
+package com.example.demo.Service;
 
-import java.util.Scanner;
+import com.example.demo.domain.LoginDTO;
 
 /**
  * packageName: com.example.demo.Login
@@ -13,11 +13,11 @@ import java.util.Scanner;
  * ================================
  * 2022-01-26    권혜민   최초 생성
  */
-public class LoginDemo {
-    public static String execute (String id, String pw, String name) {
+public class LoginService {
+    public static String execute(LoginDTO login) {
 
-        LoginApp loginApp = new LoginApp();
-        return  loginApp.login(id,pw,name);
+
+        return String.format("%s 로그인 성공",login.getId());
 
 
 

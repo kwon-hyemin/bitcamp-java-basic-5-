@@ -1,4 +1,4 @@
-package com.example.demo.grade;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.grade
@@ -11,7 +11,7 @@ package com.example.demo.grade;
  * ================================
  * 2022-01-27    권혜민   최초 생성
  */
-public class GradeApp {
+public class GradeDTO {
 
     public static String GRADE_APP = "성적표";
 
@@ -23,15 +23,62 @@ public class GradeApp {
     private int avg = 0;
     private String pass = "";
 
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getKor(){
+        return kor;
+    }
+    public void setKor(int kor){
+        this.kor = kor;
+    }
+    public int getEng(){
+        return eng;
+    }
+   public void setEng(int eng){
+        this.eng = eng;
+   }
+   public int getMath(){
+        return math;
+   }
+   public void setMath(int math){
+        this.math = math;
+   }
+   public int getTotal(){
+        return total;
+   }
+   public void setTotal(int total){
+        this.total = total;
+   }
+   public int getAvg(){
+        return avg;
+   }
+   public void setAvg(int avg){
+        this.avg = avg;
+   }
+   public String getPass(){
+        return pass;
+   }
+   public void setPass(String pass){
+        this.pass = pass;
+   }
+
+
+    public String toString(){
+        return String.format("name %s kor %d eng %d math %d", name,kor,eng,math);
+    }
+
+
     public String grade(String name, int kor, int eng, int math){
 
         this.name = name;
         this.kor = kor;
         this.eng = eng;
         this.math = math;
-        this.total = total;
-        this.avg = avg;
-        this.pass = pass;
 
         total = kor+eng+math;
         avg = total/3;

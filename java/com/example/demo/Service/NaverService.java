@@ -1,4 +1,6 @@
-package com.example.demo.Naver;
+package com.example.demo.Service;
+
+import com.example.demo.domain.NaverApp;
 
 import java.util.Scanner;
 
@@ -13,7 +15,7 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25    권혜민   최초 생성
  */
-public class NaverDemo {
+public class NaverService {
     public static void main(String[] args) {
         System.out.println("NAVER");
         Scanner scanner = new Scanner(System.in);

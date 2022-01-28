@@ -1,4 +1,6 @@
-package com.example.demo.Phon;
+package com.example.demo.Service;
+
+import com.example.demo.domain.PhonApp;
 
 import java.util.Scanner;
 
