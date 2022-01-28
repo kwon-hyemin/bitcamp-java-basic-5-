@@ -15,20 +15,29 @@ package com.example.demo.Bmi;
  * ================================
  * 2022-01-25    권혜민   최초 생성
  */
-public class BmiApp {
+public class BmiDTO {
     public static String BMI_APP = "BMI";
 
     private String cm;
     private String weight;
 
-    public String bmi(String cm,String weight){
-        this.cm = cm;
-        this.weight = weight;
 
-        String res = String.format("%s 정상체중입니다,%s" ,weight,cm);
-        return res;
+    public String getCm(){
+        return cm;
+    }
+
+    public void setCm (String cm){
+        this.cm =  cm;
+    }
+    public String getWeight(String cm){
+        return weight;
+    }
+    public void setWeight (String weight){
+        this.weight = weight;
+    }
+
 
 
     }
 
-}
+

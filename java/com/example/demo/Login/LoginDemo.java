@@ -14,26 +14,10 @@ import java.util.Scanner;
  * 2022-01-26    권혜민   최초 생성
  */
 public class LoginDemo {
-    public static void main(String[] args) {
+    public static String execute (String id, String pw, String name) {
 
-        Scanner scanner = new Scanner(System.in);
         LoginApp loginApp = new LoginApp();
-
-        System.out.println(LoginApp.LOGIN_TITLE);
-
-        String id = "";
-        String pw = "";
-        String name = "";
-
-        System.out.println("id");
-        id = scanner.next();
-        System.out.println("pw");
-        pw = scanner.next();
-        System.out.println("name");
-        name = scanner.next();
-
-        String res = loginApp.login(id, pw, name);
-        System.out.println(res);
+        return  loginApp.login(id,pw,name);
 
 
 
