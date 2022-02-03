@@ -68,12 +68,8 @@ public class GradeDTO {
    }
 
 
-    public String toString(){
-        return String.format("name %s kor %d eng %d math %d", name,kor,eng,math);
-    }
 
-
-    public String grade(String name, int kor, int eng, int math){
+    public String stgrade(String name, int kor, int eng, int math){
 
         this.name = name;
         this.kor = kor;
@@ -103,9 +99,5 @@ public class GradeDTO {
 
 
 
+    }
 
-
-
-
-
-}

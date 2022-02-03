@@ -35,13 +35,17 @@ public class Democontroller {
         BmiDTO bmi = new BmiDTO();
 
         GradeService gradeService = new GradeService();
-        GradeDTO grade = new GradeDTO();
+        GradeDTO[] grades = new GradeDTO[3];
 
         LoginService loginService = new LoginService();
         LoginDTO login = new LoginDTO() ;
 
         GoogleService googleService = new GoogleService();
         GoogleDTO google = new GoogleDTO();
+
+
+
+
 
         int i = 0;
         while (i < 3){
@@ -81,7 +85,20 @@ public class Democontroller {
                     break;
                 case "4" :
                     System.out.println(GradeDTO.GRADE_APP+"\n이름 \t국어점수 \t영어점수 \t수학점수");
-                    res = gradeService.execute(grade);
+                    for(int a = 0; a < grades.length; a++) {
+                        grades[a] = new GradeDTO();
+                        grades[a].setName(scanner.next());
+                        grades[a].setKor(scanner.nextInt());
+                        grades[a].setEng(scanner.nextInt());
+                        grades[a].setMath(scanner.nextInt());
+                    }
+                    for(int a = 0; a < grades.length; a++) {
+                        grades[a].setTotal(grades[a].getKor() + grades[a].getEng() + grades[a].getMath());
+                        grades[a].setAvg(grades[a].getTotal() / 3);
+                        grades[a].setPass((grades[a].getAvg() >= 60) ? "합격" : "불합격");
+                    }
+                    for(int a = 0; a < grades.length; a++){
+                        System.out.println(GradeService.execute(grades[a]));}
                     break;
                 case "5" :
                     System.out.println(LoginDTO.LOGIN_TITLE+"\n아이디 패스워드 이름");
