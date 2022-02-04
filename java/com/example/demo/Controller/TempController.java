@@ -45,14 +45,14 @@ public class TempController {
         threeSubject[4] = "힙";
         threeSubject1[4] = "그래프";
 
+        System.out.println("이름 \t과목");
         String threeName  = scanner.next();
         for(int i = 0; i < threeNames.length; i++){
+            System.out.println(threeSubject[i]);
+            System.out.println(threeSubject1[i]);
+            System.out.println(threeSubject2[i]);
 
-            System.out.println("이름 \t과목");
-
-            System.out.println(threeNames[i]+" : "+ threeSubject[i]);
-
-        if(threeName.equals(threeNames[i])){
+            if(threeName.equals(threeNames[i])){
             System.out.println(threeNames[i]+threeSubject[i]+threeSubject1[i]+threeSubject2[i]);
             break;
         }
