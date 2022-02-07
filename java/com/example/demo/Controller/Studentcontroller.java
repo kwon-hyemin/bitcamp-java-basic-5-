@@ -1,15 +1,11 @@
 package com.example.demo.Controller;
 
+import com.example.demo.Service.*;
 import com.example.demo.domain.BmiDTO;
-import com.example.demo.Service.BmiService;
 import com.example.demo.domain.CalcDTO;
-import com.example.demo.Service.CalcService;
 import com.example.demo.domain.GoogleDTO;
-import com.example.demo.Service.GoogleService;
 import com.example.demo.domain.LoginDTO;
-import com.example.demo.Service.LoginService;
 import com.example.demo.domain.GradeDTO;
-import com.example.demo.Service.GradeService;
 
 import java.util.Scanner;
 
@@ -24,14 +20,14 @@ import java.util.Scanner;
  * ================================
  * 2022-01-27    권혜민   최초 생성
  */
-public class Democontroller {
+public class Studentcontroller {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         CalcService calcService = new CalcService();
         CalcDTO calc = new CalcDTO();
 
-        BmiService bmiService = new BmiService();
+        StudentService service = new StudentServiceimpl();
         BmiDTO bmi = new BmiDTO();
 
         GradeService gradeService = new GradeService();
@@ -66,9 +62,9 @@ public class Democontroller {
                     System.out.println("Exit"); return;
                 case "1" :
                     System.out.println(BmiDTO.BMI_APP+"\n키 몸무게 입력");
-                    bmi.setCm(scanner.next());
-                    bmi.setWeight(scanner.next());
-                    res = bmiService.getBmi(bmi);
+                    bmi.setTall(Double.parseDouble(scanner.next()));
+                    bmi.setWeight(Double.parseDouble(scanner.next()));
+                    res = service.bmi(bmi);
 
                     break;
                 case "2" :
@@ -76,12 +72,12 @@ public class Democontroller {
                     calc.setNum1(scanner.nextInt());
                     calc.setOpcode(scanner.next());
                     calc.setNum2(scanner.nextInt());
-                    res = calcService.execute(calc);
+                    res = service.calc(calc);
                     break;
                 case "3" :
                     System.out.println(GoogleDTO.GOOGLE_APP+"\n주소 입력");
                     google.setUrl(scanner.next());
-                    res = googleService.execute(google);
+                    res = service.google(google);
                     break;
                 case "4" :
                     System.out.println(GradeDTO.GRADE_APP+"\n이름 \t국어점수 \t영어점수 \t수학점수");
@@ -98,11 +94,11 @@ public class Democontroller {
                         grades[a].setPass((grades[a].getAvg() >= 60) ? "합격" : "불합격");
                     }
                     for(int a = 0; a < grades.length; a++){
-                        System.out.println(GradeService.execute(grades[a]));}
+                        System.out.println(GradeService.grade(grades[a]));}
                     break;
                 case "5" :
                     System.out.println(LoginDTO.LOGIN_TITLE+"\n아이디 패스워드 이름");
-                    res = loginService.execute(login);
+                    res = service.login(login);
 
                 break;
                 case "6" : res = "6"; break;

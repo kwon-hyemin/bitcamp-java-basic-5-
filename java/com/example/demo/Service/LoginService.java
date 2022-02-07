@@ -14,7 +14,7 @@ import com.example.demo.domain.LoginDTO;
  * 2022-01-26    권혜민   최초 생성
  */
 public class LoginService {
-    public static String execute(LoginDTO login) {
+    public static String login(LoginDTO login) {
 
 
         return String.format("%s 로그인 성공",login.getId());

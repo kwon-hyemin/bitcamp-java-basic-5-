@@ -18,26 +18,33 @@ package com.example.demo.domain;
 public class BmiDTO {
     public static String BMI_APP = "BMI";
 
-    private String cm;
-    private String weight;
+    private String name;
+    private double tall;
+    private double weight;
 
-
-    public String getCm(){
-        return cm;
+    public String getName() {
+        return name;
     }
 
-    public void setCm (String cm){
-        this.cm =  cm;
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getWeight(){
+
+    public double getTall() {
+        return tall;
+    }
+
+    public void setTall(double tall) {
+        this.tall = tall;
+    }
+
+    public double getWeight() {
         return weight;
     }
-    public void setWeight (String weight){
+
+    public void setWeight(double weight) {
         this.weight = weight;
     }
-
-
-
-    }
+}
 
 
