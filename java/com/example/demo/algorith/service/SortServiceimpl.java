@@ -73,21 +73,19 @@ import java.util.Scanner;
 //
 
 public class SortServiceimpl implements SortService{
-    @Override
-    public int[] kNumber(Scanner scanner) {
 
-        int[] answer = {};
-        return answer;
+    @Override
+    public void kNumber(int[] array, int[][] commands) {
 
     }
 
     @Override
-    public int[] bestNumber(Scanner scanner) {
-        return new int[0];
+    public void bestNumber(int[] numbers) {
+
     }
 
     @Override
-    public int[] hIndex(Scanner scanner) {
-        return new int[0];
+    public void hIndex(int[] citations) {
+
     }
 }

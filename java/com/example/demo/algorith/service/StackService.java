@@ -14,10 +14,10 @@ import java.util.Scanner;
  * 2022-02-08    권혜민   최초 생성
  */
 public interface StackService {
-    void fdevel(Scanner scanner);
-    void printer(Scanner scanner);
-    void truck(Scanner scanner);
-    void stock(Scanner scanner);
+    void fdevel(int[] progresses, int[] speeds);
+    void printer(int[] priorities, int location);
+    void truck(int bridge_length, int weight, int[] truck_weights);
+    void stock(int[] prices);
 
 
 }

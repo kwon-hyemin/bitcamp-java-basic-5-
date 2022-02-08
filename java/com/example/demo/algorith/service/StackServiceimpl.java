@@ -124,24 +124,24 @@ import java.util.Scanner;
 
 
 
-public class StackServiceimpl implements StackService{
+public class StackServiceimpl implements StackService {
     @Override
-    public void fdevel(Scanner scanner) {
+    public void fdevel(int[] progresses, int[] speeds) {
 
     }
 
     @Override
-    public void printer(Scanner scanner) {
+    public void printer(int[] priorities, int location) {
 
     }
 
     @Override
-    public void truck(Scanner scanner) {
+    public void truck(int bridge_length, int weight, int[] truck_weights) {
 
     }
 
     @Override
-    public void stock(Scanner scanner) {
+    public void stock(int[] prices) {
 
     }
 }

@@ -1,7 +1,5 @@
 package com.example.demo.algorith.service;
 
-import java.util.Scanner;
-
 /**
  * packageName: com.example.demo.Service
  * fileName : SortService
@@ -14,8 +12,9 @@ import java.util.Scanner;
  * 2022-02-08    권혜민   최초 생성
  */
 public interface SortService {
-    int[] kNumber(Scanner scanner);
-    int[] bestNumber(Scanner scanner);
-    int[] hIndex(Scanner scanner);
+    void kNumber(int[] array, int[][] commands);
+    void bestNumber(int[] numbers);
+    void hIndex(int[] citations);
+
 
 }
