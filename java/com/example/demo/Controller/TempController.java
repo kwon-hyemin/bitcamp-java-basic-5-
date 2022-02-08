@@ -1,7 +1,5 @@
 package com.example.demo.Controller;
 
-import com.example.demo.domain.GradeDTO;
-
 import java.util.Scanner;
 
 /**
