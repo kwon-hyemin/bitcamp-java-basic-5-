@@ -2,9 +2,7 @@ package com.example.demo;
 
 import com.example.demo.algorith.controller.AlgorithmController;
 import com.example.demo.febquiz.controller.FebquizController;
-import com.example.demo.febquiz.service.FebquizService;
-import com.example.demo.febquiz.service.FebquizServiceimpl;
-import com.example.demo.phone.controller.PhoneController;
+import com.example.demo.oop.controller.PhoneController;
 import com.example.demo.quiz.controller.QuizController;
 import com.example.demo.student.controller.Membercontroller;
 import org.springframework.boot.SpringApplication;
