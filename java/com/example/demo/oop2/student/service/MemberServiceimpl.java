@@ -1,6 +1,7 @@
-package com.example.demo.student.service;
+package com.example.demo.oop2.student.service;
 
-import com.example.demo.student.domain.*;
+import com.example.demo.oop2.student.domain.*;
+
 
 /**
  * packageName: com.example.demo.Bmi
@@ -15,6 +16,10 @@ import com.example.demo.student.domain.*;
  * 2022-01-25    권혜민   최초 생성
  */
 public class MemberServiceimpl implements MemberService {
+
+
+
+
     @Override
     public String bmi(BmiDTO bmi) {
         return null;
@@ -65,7 +70,7 @@ public class MemberServiceimpl implements MemberService {
     }
 
     @Override
-    public String login(LoginDTO login) {
+    public String login(UserDTO login) {
         return String.format("%s 로그인 성공", login.getId());
     }
 }

@@ -1,6 +1,7 @@
-package com.example.demo.student.service;
+package com.example.demo.oop2.student.service;
 
-import com.example.demo.student.domain.*;
+import com.example.demo.oop2.student.domain.*;
+
 
 /**
  * packageName: com.example.demo.Service
@@ -21,7 +22,7 @@ public interface MemberService {
     String calc(CalcDTO calc);
     String google(GoogleDTO google);
     String grade(GradeDTO grade);
-    String login(LoginDTO login);
+    String login(UserDTO login);
 
 
 }

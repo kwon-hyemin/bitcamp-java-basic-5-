@@ -1,6 +1,6 @@
-package com.example.demo.student.service;
+package com.example.demo.oop2.student.service;
 
-import com.example.demo.student.domain.LoginDTO;
+import com.example.demo.oop2.student.domain.UserDTO;
 
 /**
  * packageName: com.example.demo.Login
@@ -14,7 +14,7 @@ import com.example.demo.student.domain.LoginDTO;
  * 2022-01-26    권혜민   최초 생성
  */
 public class LoginService {
-    public static String login(LoginDTO login) {
+    public static String login(UserDTO login) {
 
 
         return String.format("%s 로그인 성공",login.getId());

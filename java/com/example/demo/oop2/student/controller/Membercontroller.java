@@ -1,11 +1,11 @@
-package com.example.demo.student.controller;
+package com.example.demo.oop2.student.controller;
 
-import com.example.demo.student.domain.BmiDTO;
-import com.example.demo.student.domain.CalcDTO;
-import com.example.demo.student.domain.GoogleDTO;
-import com.example.demo.student.domain.LoginDTO;
-import com.example.demo.student.domain.GradeDTO;
-import com.example.demo.student.service.*;
+import com.example.demo.oop2.student.service.*;
+import com.example.demo.oop2.student.domain.BmiDTO;
+import com.example.demo.oop2.student.domain.CalcDTO;
+import com.example.demo.oop2.student.domain.GoogleDTO;
+import com.example.demo.oop2.student.domain.UserDTO;
+import com.example.demo.oop2.student.domain.GradeDTO;
 
 import java.util.Scanner;
 
@@ -33,7 +33,6 @@ public class Membercontroller {
         GradeDTO[] grades = new GradeDTO[3];
 
         LoginService loginService = new LoginService();
-        LoginDTO login = new LoginDTO() ;
 
         GoogleService googleService = new GoogleService();
         GoogleDTO google = new GoogleDTO();
@@ -96,7 +95,8 @@ public class Membercontroller {
                         System.out.println(GradeService.grade(grades[a]));}
                     break;
                 case "5" :
-                    System.out.println(LoginDTO.LOGIN_TITLE+"\n아이디 패스워드 이름");
+                    UserDTO login =  UserDTO.getInstance();
+                    System.out.println(UserDTO.LOGIN_TITLE+"\n아이디 패스워드 이름");
                     res = service.login(login);
 
                 break;

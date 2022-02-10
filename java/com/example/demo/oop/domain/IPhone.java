@@ -1,5 +1,7 @@
 package com.example.demo.oop.domain;
 
+import com.example.demo.oop2.student.domain.CalcDTO;
+
 /**
  * packageName: com.example.demo.phone.domain
  * fileName : IPhone
@@ -14,12 +16,12 @@ package com.example.demo.oop.domain;
  * 아이폰은 Celphone 에서 검색 (search) 속성이 추가된다
  * 잡스는 아이폰을 휴대폰으로 불리는 것을 거부했다 . 그래서 KIND 는 아이폰이다.
  */
-public class IPhone extends CelPhone{
+public class IPhone extends CalcDTO {
+    public final static String KIND = "아이폰";
+
     public IPhone(String company){
         super(KIND,company,"이동중");
     }
-
-    public final static String KIND = "아이폰";
     private String search;
 
     public String getSearch() {

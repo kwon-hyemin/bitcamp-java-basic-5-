@@ -1,4 +1,4 @@
-package com.example.demo.student.domain;
+package com.example.demo.oop2.student.domain;
 
 /**
  * packageName: com.example.demo.Bmi

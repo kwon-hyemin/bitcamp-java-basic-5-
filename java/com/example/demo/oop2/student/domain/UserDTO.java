@@ -1,4 +1,4 @@
-package com.example.demo.student.domain;
+package com.example.demo.oop2.student.domain;
 
 /**
  * packageName: com.example.demo.Login
@@ -11,8 +11,14 @@ package com.example.demo.student.domain;
  * ================================
  * 2022-01-26    권혜민   최초 생성
  */
-public class LoginDTO {
+public class UserDTO {
     public static String LOGIN_TITLE = "로그인앱";
+
+    private final static UserDTO userDTO = new UserDTO();
+    private UserDTO(){}
+    public static UserDTO getInstance(){
+        return userDTO;
+    }
 
     String id;
     String pw;

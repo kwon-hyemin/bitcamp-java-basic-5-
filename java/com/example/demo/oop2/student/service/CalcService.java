@@ -1,6 +1,6 @@
-package com.example.demo.student.service;
+package com.example.demo.oop2.student.service;
 
-import com.example.demo.student.domain.CalcDTO;
+import com.example.demo.oop2.student.domain.CalcDTO;
 
 /**
  * packageName: com.example.demo.Calc

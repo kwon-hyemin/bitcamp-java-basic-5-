@@ -76,13 +76,23 @@ public class FebquizServiceimpl implements FebquizService{
 
     @Override
     public void multiplication(Scanner scanner) {
-            int i, j;
+        int i, j;
 
-            for (i = 1; i <= 9; i++) {
-                for (j = 1; j <= 9; j++) {
-                    System.out.print("\t"+ j + "*" + i + "=" + i * j  );
-                }
-                System.out.println();
+        for (i = 1; i <= 9; i++) {
+            for (j = 2; j <= 5; j++) {
+                System.out.print("\t"+ j + "*" + i + "=" + i * j  );
             }
+            System.out.println();
+
+        }
+        System.out.println();
+        for(i = 1; i <= 9; i++){
+            for (j = 6; j <=9; j++){
+                System.out.print("\t"+ j + "*" + i + "=" + i * j );
+            }
+            System.out.println();
+        }
+
+
     }
 }
