@@ -19,47 +19,68 @@ import java.util.Scanner;
 public class Feb10quizController {
     public void execute(){
         Scanner scanner = new Scanner(System.in);
+        int [] arr = new int[10];
+        Feb10quizSrvice service = new Feb10quizServiceimpl();
+
+
         while (true){
             System.out.println("0.Exit 1.버블 2.인설트 3.선택 4.퀵 5.마진 6.마법 7.지그제그 8.별 9.삼각별");
-            Feb10quizSrvice feb10quizSrvice = new Feb10quizServiceimpl();
             switch (scanner.next()){
                 case "0" :
                     System.out.println("종료");return;
                 case "1" :
+                    for(int i = 0; i < arr.length; i++){
+                        arr[i] = (int) (Math.random() * 100);
+                    }
+                    service.bubbleSort(arr);
                     System.out.println("버블");
-                    feb10quizSrvice.quickSort();
+                    System.out.println();
                     break;
                 case "2" :
+                    for(int i = 0; i < arr.length; i++){
+                        arr[i] = (int) (Math.random() * 100);
+                    }
+                    service.insertionSort(arr);
                     System.out.println("인설트");
-                    feb10quizSrvice.quickSort();
+                    System.out.println();
                     break;
                 case "3":
+                    for(int i = 0; i < arr.length; i++){
+                        arr[i] = (int) (Math.random() * 100);
+                    }
+                    service.selectionSort(arr);
+                    System.out.println();
+
                     System.out.println("선택");
-                    feb10quizSrvice.quickSort();
+
                     break;
                 case "4":
+                    for(int i = 0; i < arr.length; i++){
+                        arr[i] = (int) (Math.random() * 100);
+                    }
+                    service.quickSort(arr, 0, arr.length -1); // 퀵 정렬
+                    service.print(arr);
                     System.out.println("퀵");
-                    feb10quizSrvice.quickSort();
                     break;
                 case "5":
                     System.out.println("마진");
-                    feb10quizSrvice.quickSort();
+
                     break;
                 case "6":
                     System.out.println("마법");
-                    feb10quizSrvice.quickSort();
+
                     break;
                 case "7":
                     System.out.println("지그제그");
-                    feb10quizSrvice.quickSort();
+
                     break;
                 case "8":
                     System.out.println("별");
-                    feb10quizSrvice.quickSort();
+
                     break;
                 case "9":
                     System.out.println("삼각별");
-                    feb10quizSrvice.quickSort();
+
                     break;
 
                 default:

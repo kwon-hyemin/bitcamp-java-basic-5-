@@ -1,5 +1,7 @@
 package com.example.demo.domain;
 
+import java.util.Scanner;
+
 /**
  * packageName: com.example.demo.domain
  * fileName : JobDTO
@@ -12,4 +14,10 @@ package com.example.demo.domain;
  * 2022-02-03    권혜민   최초 생성
  */
 public class AlgoDTO {
+    public static void main(String[] args) {
+
+
+
+
+    }
 }
