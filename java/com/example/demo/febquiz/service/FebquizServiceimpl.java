@@ -81,7 +81,7 @@ public class FebquizServiceimpl implements FebquizService{
         for (i = 1; i <= 9; i++) {
             for (j = 2; j <= 5; j++) {
                 System.out.print("\t"+ j + "*" + i + "=" + i * j  );
-            }
+            }//2~5 까지 행과 열로된 
             System.out.println();
 
         }

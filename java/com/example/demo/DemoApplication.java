@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.algorith.controller.AlgorithmController;
+import com.example.demo.auth.controller.AuthController;
 import com.example.demo.febquiz.controller.Feb10quizController;
 import com.example.demo.febquiz.controller.FebquizController;
 import com.example.demo.febquiz.service.Feb10quizServiceimpl;
@@ -23,6 +24,7 @@ public class DemoApplication {
 		AlgorithmController algorithmController = new AlgorithmController();
 		FebquizController febquizController = new FebquizController();
 		Feb10quizController feb10quizController = new Feb10quizController();
+		AuthController authController = new AuthController();
 
 		SpringApplication.run(DemoApplication.class, args);
 		Scanner scanner = new Scanner(System.in);
@@ -33,7 +35,7 @@ public class DemoApplication {
 					System.out.println("### Exit ###"); return;
 				case "1" :
 					System.out.println("### Auth ###");
-					phoneController.execute(scanner);
+					AuthController.execute(scanner);
 					break;
 				case "2" :
 					System.out.println("### OOP ###");
@@ -53,7 +55,6 @@ public class DemoApplication {
 				case "6" :
 					System.out.println("### Feb10Quiz ###");
 					feb10quizController.execute();
-
 				default:
 					System.out.println("Wrong Number");
 					break;
